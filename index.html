@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>London Manufacturing Profiler</title>
+
+<script src="table1_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="table1_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="table1_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="table1_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="table1_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="table1_files/navigation-1.1/tabsets.js"></script>
+<link href="table1_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="table1_files/highlightjs-9.12.0/highlight.js"></script>
+<link href="table1_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="table1_files/pagedtable-1.1/js/pagedtable.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">London Manufacturing Profiler</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#summary-matrix"><span class="toc-section-number">2</span> Summary matrix</a></li>
+</ul>
+</div>
+
+<style>
+* {
+  font-family: "Palatino"
+}
+
+h1{
+    font-size: 190%
+}
+
+h2{
+    font-size: 160%
+}
+
+h3{
+    font-size: 150%
+}
+
+h4{
+    font-size: 130%
+}
+
+h5{
+    font-size: 110%
+}
+
+h6{
+    font-size: 90%
+}
+
+.main-container {
+    max-width: 1200px !important;
+  }
+</style>
+<hr>
+<div>Nicolas Palominos, Sam Griffiths, Francesca Froy, Jess Ferm.</div>
+<div><b>The Bartlett Faculty of the Built Environment, University College London.</b></div>
+<div>January, 2020</div>
+
+<div><img src="https://raw.githubusercontent.com/npalomin/NUM_london/master/logos.png" alt="logos" width="300" ></div>
+<hr>
+<div id="introduction" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<div style="width: 70%">
+This profiler brings together a set of urban manufacturing and urban morphology measures in the area of Greater London. Manufacturing is quantified according to 3 indicators: ‘Manufacturing Businesses’ (London Datastore), ‘Manufacturing Jobs’ (BRES) and ‘Industrial Land Designations’ (GLA). For a detailed review of these categories including the data sources see <a href="https://npalomin.github.io/pnum/MPL.html">here</a>. A cartographic summary can be consulted <a href ="https://npalomin.github.io/pnum/LW/LW.html">here.</a><br>
+<div>
+
+</div>
+To investigate the relationships between these measures with the spatial accesibility and urban structure of Greater London, <a href="https://spacesyntax-openmapping.netlify.com/#12/51.5002/-0.1357">Space Syntax</a> measures of ‘Choice’(through-routes) and ‘Integration’(to-routes) at 2km and 10km distances are used to create 12 map overlays.<br>
+<div>
+
+</div>
+<p>The selection of street segments with highest ‘Choice’ and ‘Integration’ (top 20%) shows a clearer view of the key street segments in each measure. A summary for these measures is shown below.</p>
+</div>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<td colspan="7" style="text-align: left;">
+Summary of highest 20% values of Choice and Integration (n=23409)
+</td>
+</tr>
+<tr>
+<th style="border-bottom: 1px solid grey; border-top: 2px solid grey;">
+</th>
+<th style="border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Min.
+</th>
+<th style="border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+1st Qu.
+</th>
+<th style="border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Median
+</th>
+<th style="border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Mean
+</th>
+<th style="border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+3rd Qu.
+</th>
+<th style="border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Max.
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">
+Choice 2km
+</td>
+<td style="padding:1em; text-align: right;">
+14138.2
+</td>
+<td style="padding:1em; text-align: right; background-color: #f7f7f7;">
+18558.2
+</td>
+<td style="padding:1em; text-align: right;">
+25726.0
+</td>
+<td style="padding:1em; text-align: right; background-color: #f7f7f7;">
+34227.0
+</td>
+<td style="padding:1em; text-align: right;">
+40110.8
+</td>
+<td style="padding:1em; text-align: right; background-color: #f7f7f7;">
+259147.2
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+Choice 10km
+</td>
+<td style="padding:1em; text-align: right;">
+859633.8
+</td>
+<td style="padding:1em; text-align: right; background-color: #f7f7f7;">
+1565274.9
+</td>
+<td style="padding:1em; text-align: right;">
+2940044.2
+</td>
+<td style="padding:1em; text-align: right; background-color: #f7f7f7;">
+4995085.5
+</td>
+<td style="padding:1em; text-align: right;">
+6071841.5
+</td>
+<td style="padding:1em; text-align: right; background-color: #f7f7f7;">
+45672164.0
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+Integration 2km
+</td>
+<td style="padding:1em; text-align: right;">
+217.7
+</td>
+<td style="padding:1em; text-align: right; background-color: #f7f7f7;">
+242.4
+</td>
+<td style="padding:1em; text-align: right;">
+279.6
+</td>
+<td style="padding:1em; text-align: right; background-color: #f7f7f7;">
+304.1
+</td>
+<td style="padding:1em; text-align: right;">
+343.3
+</td>
+<td style="padding:1em; text-align: right; background-color: #f7f7f7;">
+695.6
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+Integration 10km
+</td>
+<td style="padding:1em; border-bottom: 2px solid grey; text-align: right;">
+2165.3
+</td>
+<td style="padding:1em; border-bottom: 2px solid grey; text-align: right; background-color: #f7f7f7;">
+2352.3
+</td>
+<td style="padding:1em; border-bottom: 2px solid grey; text-align: right;">
+2558.6
+</td>
+<td style="padding:1em; border-bottom: 2px solid grey; text-align: right; background-color: #f7f7f7;">
+2607.5
+</td>
+<td style="padding:1em; border-bottom: 2px solid grey; text-align: right;">
+2812.8
+</td>
+<td style="padding:1em; border-bottom: 2px solid grey; text-align: right; background-color: #f7f7f7;">
+3672.4
+</td>
+</tr>
+</tbody>
+</table>
+<div style="width: 70%">
+The differences betwween these measures is not only in their metrics but also in their spatial pattern
+</div>
+<p><img src="table1_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="summary-matrix" class="section level1">
+<h1><span class="header-section-number">2</span> Summary matrix</h1>
+<div style="width: 70%">
+The following matrix allows a visual exploratory data analysis of the measures previously presented. Each map combines a ‘Manufacturing’ with an ‘Accesibility’ data layer. The map images link to interactive maps with pan, zoom and infowindow functionalites for a deeper graphical examination.
+</div>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+dataset
+</th>
+<th style="border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+London Businesses Directory (points)
+</th>
+<th style="border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Business Register and Employment Survey (LSOA)
+</th>
+<th style="border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Industrial Land Designations (LSOA)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:1em; text-align: left;">
+<i>map notes</i>
+</td>
+<td style="padding:1em; text-align: left;">
+<i>n=22,320 <br> Tooltip: Company Name</i>
+</td>
+<td style="padding:1em; text-align: left;">
+<i>Darker yellow is both conditions: <br> &gt; 6% of Manufacturing jobs <br> &gt; 40 jobs <br> Tooltip: Number of jobs </i>
+</td>
+<td style="padding:1em; text-align: left;">
+<i>Includes SIL, LSIS and NAL<br> Tooltip: Area of industrial land (sqm)</i>
+</td>
+</tr>
+<tr>
+<td style="padding:1em; text-align: left;">
+<b>Choice 2km</b>
+</td>
+<td style="padding:1em; text-align: left;">
+<a href="choice2.html" target="_blank"><img src="1.png"></a>
+</td>
+<td style="padding:1em; text-align: left;">
+<a href="choice2_bres.html" target="_blank"><img src="2.png"></a>
+</td>
+<td style="padding:1em; text-align: left;">
+<a href="choice2_idl.html" target="_blank"><img src="3.png"></a>
+</td>
+</tr>
+<tr>
+<td style="padding:1em; text-align: left;">
+<b>Choice 10km</b>
+</td>
+<td style="padding:1em; text-align: left;">
+<a href="choice10.html" target="_blank"><img src="4.png"></a>
+</td>
+<td style="padding:1em; text-align: left;">
+<a href="choice10_bres.html" target="_blank"><img src="5.png"></a>
+</td>
+<td style="padding:1em; text-align: left;">
+<a href="choice10_idl.html" target="_blank"><img src="6.png"></a>
+</td>
+</tr>
+<tr>
+<td style="padding:1em; text-align: left;">
+<b>Integration 2km</b>
+</td>
+<td style="padding:1em; text-align: left;">
+<a href="integration2.html" target="_blank"><img src="7.png"></a>
+</td>
+<td style="padding:1em; text-align: left;">
+<a href="integration2_bres.html" target="_blank"><img src="8.png"></a>
+</td>
+<td style="padding:1em; text-align: left;">
+<a href="integration2_idl.html" target="_blank"><img src="9.png"></a>
+</td>
+</tr>
+<tr>
+<td style="padding:1em; border-bottom: 2px solid grey; text-align: left;">
+<b>Integration 10km</b>
+</td>
+<td style="padding:1em; border-bottom: 2px solid grey; text-align: left;">
+<a href="integration10.html" target="_blank"><img src="10.png"></a>
+</td>
+<td style="padding:1em; border-bottom: 2px solid grey; text-align: left;">
+<a href="integration10_bres.html" target="_blank"><img src="11.png"></a>
+</td>
+<td style="padding:1em; border-bottom: 2px solid grey; text-align: left;">
+<a href="integration10_idl.html" target="_blank"><img src="12.png"></a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
